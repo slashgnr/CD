@@ -1,0 +1,8 @@
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_Dal\CD_Dal\bin\Debug\CD_DAL.dll.config
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_Dal\CD_Dal\bin\Debug\CD_DAL.dll
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_Dal\CD_Dal\bin\Debug\CD_DAL.pdb
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_Dal\CD_Dal\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_Dal\CD_Dal\obj\Debug\CD_DAL.dll
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_Dal\CD_Dal\obj\Debug\CD_DAL.pdb
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_Dal\CD_Dal\bin\Debug\CD_Global.dll
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_Dal\CD_Dal\bin\Debug\CD_Global.pdb

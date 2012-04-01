@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CD_DataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CD_DataModelStoreContainer">
+          <EntitySet Name="CD_Countries" EntityType="CD_DataModel.Store.CD_Countries" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CD_EntityTypes" EntityType="CD_DataModel.Store.CD_EntityTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CD_Languages" EntityType="CD_DataModel.Store.CD_Languages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CD_Users" EntityType="CD_DataModel.Store.CD_Users" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="CD_Countries">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CD_EntityTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CD_Languages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CD_Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Username" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" />
+          <Property Name="Salt" Type="nvarchar" MaxLength="100" />
+          <Property Name="BirthDate" Type="datetime" />
+          <Property Name="BirthDateHeb" Type="nvarchar" MaxLength="100" />
+          <Property Name="EGenderID" Type="int" />
+          <Property Name="LastVisitDate" Type="datetime" />
+          <Property Name="LastVisitIP" Type="nvarchar" MaxLength="20" />
+          <Property Name="TimeStamp" Type="datetime" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CD_DataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CD_DataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CD_Countries" EntityType="CD_DataModel.CD_Countries" />
+          <EntitySet Name="CD_EntityTypes" EntityType="CD_DataModel.CD_EntityTypes" />
+          <EntitySet Name="CD_Languages" EntityType="CD_DataModel.CD_Languages" />
+          <EntitySet Name="CD_Users" EntityType="CD_DataModel.CD_Users" />
+        </EntityContainer>
+        <EntityType Name="CD_Countries">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CD_EntityTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CD_Languages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CD_Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Username" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Salt" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BirthDate" />
+          <Property Type="String" Name="BirthDateHeb" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="EGenderID" />
+          <Property Type="DateTime" Name="LastVisitDate" />
+          <Property Type="String" Name="LastVisitIP" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="TimeStamp" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CD_DataModelStoreContainer" CdmEntityContainer="CD_DataEntities">
+          <EntitySetMapping Name="CD_Countries">
+            <EntityTypeMapping TypeName="CD_DataModel.CD_Countries">
+              <MappingFragment StoreEntitySet="CD_Countries">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CD_EntityTypes">
+            <EntityTypeMapping TypeName="CD_DataModel.CD_EntityTypes">
+              <MappingFragment StoreEntitySet="CD_EntityTypes">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CD_Languages">
+            <EntityTypeMapping TypeName="CD_DataModel.CD_Languages">
+              <MappingFragment StoreEntitySet="CD_Languages">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CD_Users">
+            <EntityTypeMapping TypeName="CD_DataModel.CD_Users">
+              <MappingFragment StoreEntitySet="CD_Users">
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="LastVisitIP" ColumnName="LastVisitIP" />
+                <ScalarProperty Name="LastVisitDate" ColumnName="LastVisitDate" />
+                <ScalarProperty Name="EGenderID" ColumnName="EGenderID" />
+                <ScalarProperty Name="BirthDateHeb" ColumnName="BirthDateHeb" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="CD_DataModel">
+        <EntityTypeShape EntityType="CD_DataModel.CD_Countries" Width="1.5" PointX="0.75" PointY="0.75" Height="1.4033821614583388" />
+        <EntityTypeShape EntityType="CD_DataModel.CD_EntityTypes" Width="1.5" PointX="2.75" PointY="0.75" Height="1.4033821614583282" />
+        <EntityTypeShape EntityType="CD_DataModel.CD_Languages" Width="1.5" PointX="0.75" PointY="3.75" Height="1.4033821614583246" />
+        <EntityTypeShape EntityType="CD_DataModel.CD_Users" Width="1.5" PointX="2.75" PointY="3.75" Height="3.5186979166666674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

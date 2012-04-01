@@ -1,0 +1,9 @@
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_BLL\bin\Debug\CD_BLL.dll
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_BLL\bin\Debug\CD_BLL.pdb
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_BLL\bin\Debug\CD_DAL.dll
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_BLL\bin\Debug\CD_Global.dll
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_BLL\bin\Debug\CD_DAL.pdb
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_BLL\bin\Debug\CD_Global.pdb
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_BLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_BLL\obj\Debug\CD_BLL.dll
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\CD_BLL\obj\Debug\CD_BLL.pdb

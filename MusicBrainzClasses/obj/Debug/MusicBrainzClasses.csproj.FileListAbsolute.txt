@@ -1,0 +1,5 @@
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\MusicBrainzClasses\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\MusicBrainzClasses\bin\Debug\MusicBrainzClasses.dll
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\MusicBrainzClasses\bin\Debug\MusicBrainzClasses.pdb
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\MusicBrainzClasses\obj\Debug\MusicBrainzClasses.dll
+C:\Users\Tomer\Documents\Visual Studio 2010\WebSites\CD\MusicBrainzClasses\obj\Debug\MusicBrainzClasses.pdb

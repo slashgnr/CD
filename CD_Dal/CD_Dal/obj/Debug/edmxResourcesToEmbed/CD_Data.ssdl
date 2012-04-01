@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MSSQL_tzuraModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MSSQL_tzuraModelStoreContainer">
+    <EntitySet Name="CD_AlbumGenreRelation" EntityType="MSSQL_tzuraModel.Store.CD_AlbumGenreRelation" store:Type="Tables" Schema="tzura_menahem" />
+    <EntitySet Name="CD_Albums" EntityType="MSSQL_tzuraModel.Store.CD_Albums" store:Type="Tables" Schema="tzura_menahem" />
+    <EntitySet Name="CD_Artists" EntityType="MSSQL_tzuraModel.Store.CD_Artists" store:Type="Tables" Schema="tzura_menahem" />
+    <EntitySet Name="CD_Genres" EntityType="MSSQL_tzuraModel.Store.CD_Genres" store:Type="Tables" Schema="tzura_menahem" />
+    <EntitySet Name="CD_Items" EntityType="MSSQL_tzuraModel.Store.CD_Items" store:Type="Tables" Schema="tzura_menahem" />
+    <EntitySet Name="CD_ItemTypes" EntityType="MSSQL_tzuraModel.Store.CD_ItemTypes" store:Type="Tables" Schema="tzura_menahem" />
+    <EntitySet Name="CD_MainRelations" EntityType="MSSQL_tzuraModel.Store.CD_MainRelations" store:Type="Tables" Schema="tzura_menahem" />
+    <EntitySet Name="CD_Songs" EntityType="MSSQL_tzuraModel.Store.CD_Songs" store:Type="Tables" Schema="tzura_menahem" />
+    <EntitySet Name="CD_SongVersions" EntityType="MSSQL_tzuraModel.Store.CD_SongVersions" store:Type="Tables" Schema="tzura_menahem" />
+    <EntitySet Name="CD_Users" EntityType="MSSQL_tzuraModel.Store.CD_Users" store:Type="Tables" Schema="tzura_menahem" />
+    <AssociationSet Name="FK_CD_MainRelations_CD_Albums" Association="MSSQL_tzuraModel.Store.FK_CD_MainRelations_CD_Albums">
+      <End Role="CD_Albums" EntitySet="CD_Albums" />
+      <End Role="CD_MainRelations" EntitySet="CD_MainRelations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_MainRelations_CD_Artists" Association="MSSQL_tzuraModel.Store.FK_CD_MainRelations_CD_Artists">
+      <End Role="CD_Artists" EntitySet="CD_Artists" />
+      <End Role="CD_MainRelations" EntitySet="CD_MainRelations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_MainRelations_CD_Songs" Association="MSSQL_tzuraModel.Store.FK_CD_MainRelations_CD_Songs">
+      <End Role="CD_Songs" EntitySet="CD_Songs" />
+      <End Role="CD_MainRelations" EntitySet="CD_MainRelations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_MainRelations_CD_SongVersions" Association="MSSQL_tzuraModel.Store.FK_CD_MainRelations_CD_SongVersions">
+      <End Role="CD_SongVersions" EntitySet="CD_SongVersions" />
+      <End Role="CD_MainRelations" EntitySet="CD_MainRelations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CD_AlbumGenreRelation">
+    <Key>
+      <PropertyRef Name="AlbumGenreRelationID" />
+    </Key>
+    <Property Name="AlbumGenreRelationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AlbumID" Type="numeric" />
+    <Property Name="GenreID" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CD_Albums">
+    <Key>
+      <PropertyRef Name="AlbumID" />
+    </Key>
+    <Property Name="AlbumID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AlbumName" Type="nvarchar" MaxLength="500" />
+    <Property Name="AlbumMisspelling" Type="nvarchar" MaxLength="500" />
+    <Property Name="Year" Type="datetime" />
+    <Property Name="YearTxt" Type="nvarchar" MaxLength="500" />
+    <Property Name="Type" Type="smallint" />
+    <Property Name="Timestamps" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="CDDB" Type="nvarchar" MaxLength="50" />
+    <Property Name="MBID" Type="nvarchar" MaxLength="50" />
+    <Property Name="PublisherID" Type="int" />
+  </EntityType>
+  <EntityType Name="CD_Artists">
+    <Key>
+      <PropertyRef Name="ArtistID" />
+    </Key>
+    <Property Name="ArtistID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ArtistName" Type="nvarchar" MaxLength="500" />
+    <Property Name="MisSpelling" Type="nvarchar" MaxLength="500" />
+    <Property Name="Timestamp" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UserId" Type="int" />
+  </EntityType>
+  <EntityType Name="CD_Genres">
+    <Key>
+      <PropertyRef Name="GenreID" />
+    </Key>
+    <Property Name="GenreID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GenreName" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="CD_Items">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ItemType" Type="int" />
+    <Property Name="AlbumID" Type="numeric" />
+    <Property Name="ArtistID" Type="numeric" />
+    <Property Name="SongID" Type="numeric" />
+    <Property Name="ItemTxt" Type="nvarchar(max)" />
+    <Property Name="ItemPic" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemSound" Type="nvarchar" MaxLength="50" />
+    <Property Name="ItemLink" Type="nvarchar" MaxLength="500" />
+    <Property Name="AlbumID_Related" Type="numeric" />
+    <Property Name="ArtistID_Related" Type="numeric" />
+    <Property Name="SongID_Related" Type="numeric" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="UserID" Type="numeric" />
+    <Property Name="TimeStamp" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CD_ItemTypes">
+    <Key>
+      <PropertyRef Name="ItemTypeID" />
+    </Key>
+    <Property Name="ItemTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ItemTypeName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CD_MainRelations">
+    <Key>
+      <PropertyRef Name="RelationID" />
+    </Key>
+    <Property Name="RelationID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SongID" Type="numeric" />
+    <Property Name="SongVersionID" Type="numeric" />
+    <Property Name="AlbumID" Type="numeric" />
+    <Property Name="ArtistID" Type="numeric" />
+    <Property Name="OrderNum" Type="numeric" />
+    <Property Name="TimeStamp" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CD_Songs">
+    <Key>
+      <PropertyRef Name="SongID" />
+    </Key>
+    <Property Name="SongID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SongName" Type="nvarchar" MaxLength="500" />
+    <Property Name="SongMisspelling" Type="nvarchar" MaxLength="500" />
+    <Property Name="Lyrics" Type="nvarchar(max)" />
+    <Property Name="FreeTxt" Type="nvarchar(max)" />
+    <Property Name="Timestamp" Type="datetime" />
+    <Property Name="LastUpdate" Type="datetime" />
+    <Property Name="Userid" Type="numeric" />
+  </EntityType>
+  <EntityType Name="CD_SongVersions">
+    <Key>
+      <PropertyRef Name="SongVersionsID" />
+    </Key>
+    <Property Name="SongVersionsID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SongID" Type="numeric" />
+    <Property Name="Length" Type="datetime" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UserID" Type="numeric" />
+  </EntityType>
+  <EntityType Name="CD_Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="500" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="300" />
+    <Property Name="PassWord" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Salt" Type="nvarchar" MaxLength="2000" />
+    <Property Name="GenderID" Type="smallint" />
+    <Property Name="BirthDate" Type="datetime" />
+    <Property Name="BirthDateHeb" Type="nvarchar" MaxLength="500" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="LastVisitDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_CD_MainRelations_CD_Albums">
+    <End Role="CD_Albums" Type="MSSQL_tzuraModel.Store.CD_Albums" Multiplicity="0..1" />
+    <End Role="CD_MainRelations" Type="MSSQL_tzuraModel.Store.CD_MainRelations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Albums">
+        <PropertyRef Name="AlbumID" />
+      </Principal>
+      <Dependent Role="CD_MainRelations">
+        <PropertyRef Name="AlbumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_MainRelations_CD_Artists">
+    <End Role="CD_Artists" Type="MSSQL_tzuraModel.Store.CD_Artists" Multiplicity="0..1" />
+    <End Role="CD_MainRelations" Type="MSSQL_tzuraModel.Store.CD_MainRelations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Artists">
+        <PropertyRef Name="ArtistID" />
+      </Principal>
+      <Dependent Role="CD_MainRelations">
+        <PropertyRef Name="ArtistID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_MainRelations_CD_Songs">
+    <End Role="CD_Songs" Type="MSSQL_tzuraModel.Store.CD_Songs" Multiplicity="0..1" />
+    <End Role="CD_MainRelations" Type="MSSQL_tzuraModel.Store.CD_MainRelations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Songs">
+        <PropertyRef Name="SongID" />
+      </Principal>
+      <Dependent Role="CD_MainRelations">
+        <PropertyRef Name="SongID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_MainRelations_CD_SongVersions">
+    <End Role="CD_SongVersions" Type="MSSQL_tzuraModel.Store.CD_SongVersions" Multiplicity="0..1" />
+    <End Role="CD_MainRelations" Type="MSSQL_tzuraModel.Store.CD_MainRelations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_SongVersions">
+        <PropertyRef Name="SongVersionsID" />
+      </Principal>
+      <Dependent Role="CD_MainRelations">
+        <PropertyRef Name="SongVersionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'MSSQL_tzura.tzura_menahem.CD_Publishers' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="CD_Publishers">
+        <Property Name="PublisherID" Type="int" />
+        <Property Name="PublisherName" Type="nvarchar" MaxLength="500" />
+        <Property Name="PublisherTxt" Type="nvarchar" MaxLength="2000" />
+        <Property Name="TimeStamp" Type="datetime" />
+      </EntityType>-->
+</Schema>

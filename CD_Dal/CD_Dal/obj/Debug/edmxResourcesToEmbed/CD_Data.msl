@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MSSQL_tzuraModelStoreContainer" CdmEntityContainer="CD_data">
+    <EntitySetMapping Name="CD_Artists">
+      <EntityTypeMapping TypeName="IsTypeOf(MSSQL_tzuraModel.CD_Artists)">
+        <MappingFragment StoreEntitySet="CD_Artists">
+          <ScalarProperty Name="ArtistID" ColumnName="ArtistID" />
+          <ScalarProperty Name="ArtistName" ColumnName="ArtistName" />
+          <ScalarProperty Name="MisSpelling" ColumnName="MisSpelling" />
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Songs">
+      <EntityTypeMapping TypeName="IsTypeOf(MSSQL_tzuraModel.CD_Songs)">
+        <MappingFragment StoreEntitySet="CD_Songs">
+          <ScalarProperty Name="FreeTxt" ColumnName="FreeTxt" />
+          <ScalarProperty Name="Lyrics" ColumnName="Lyrics" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="SongID" ColumnName="SongID" />
+          <ScalarProperty Name="SongMisspelling" ColumnName="SongMisspelling" />
+          <ScalarProperty Name="SongName" ColumnName="SongName" />
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_AlbumGenreRelation">
+      <EntityTypeMapping TypeName="MSSQL_tzuraModel.CD_AlbumGenreRelation">
+        <MappingFragment StoreEntitySet="CD_AlbumGenreRelation">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+          <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+          <ScalarProperty Name="AlbumGenreRelationID" ColumnName="AlbumGenreRelationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Albums">
+      <EntityTypeMapping TypeName="MSSQL_tzuraModel.CD_Albums">
+        <MappingFragment StoreEntitySet="CD_Albums">
+          <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+          <ScalarProperty Name="MBID" ColumnName="MBID" />
+          <ScalarProperty Name="CDDB" ColumnName="CDDB" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Timestamps" ColumnName="Timestamps" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="YearTxt" ColumnName="YearTxt" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="AlbumMisspelling" ColumnName="AlbumMisspelling" />
+          <ScalarProperty Name="AlbumName" ColumnName="AlbumName" />
+          <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Genres">
+      <EntityTypeMapping TypeName="MSSQL_tzuraModel.CD_Genres">
+        <MappingFragment StoreEntitySet="CD_Genres">
+          <ScalarProperty Name="GenreName" ColumnName="GenreName" />
+          <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Items">
+      <EntityTypeMapping TypeName="MSSQL_tzuraModel.CD_Items">
+        <MappingFragment StoreEntitySet="CD_Items">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SongID_Related" ColumnName="SongID_Related" />
+          <ScalarProperty Name="ArtistID_Related" ColumnName="ArtistID_Related" />
+          <ScalarProperty Name="AlbumID_Related" ColumnName="AlbumID_Related" />
+          <ScalarProperty Name="ItemLink" ColumnName="ItemLink" />
+          <ScalarProperty Name="ItemSound" ColumnName="ItemSound" />
+          <ScalarProperty Name="ItemPic" ColumnName="ItemPic" />
+          <ScalarProperty Name="ItemTxt" ColumnName="ItemTxt" />
+          <ScalarProperty Name="SongID" ColumnName="SongID" />
+          <ScalarProperty Name="ArtistID" ColumnName="ArtistID" />
+          <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_ItemTypes">
+      <EntityTypeMapping TypeName="MSSQL_tzuraModel.CD_ItemTypes">
+        <MappingFragment StoreEntitySet="CD_ItemTypes">
+          <ScalarProperty Name="ItemTypeName" ColumnName="ItemTypeName" />
+          <ScalarProperty Name="ItemTypeID" ColumnName="ItemTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_MainRelations">
+      <EntityTypeMapping TypeName="MSSQL_tzuraModel.CD_MainRelations">
+        <MappingFragment StoreEntitySet="CD_MainRelations">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="ArtistID" ColumnName="ArtistID" />
+          <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+          <ScalarProperty Name="SongVersionID" ColumnName="SongVersionID" />
+          <ScalarProperty Name="SongID" ColumnName="SongID" />
+          <ScalarProperty Name="RelationID" ColumnName="RelationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_SongVersions">
+      <EntityTypeMapping TypeName="MSSQL_tzuraModel.CD_SongVersions">
+        <MappingFragment StoreEntitySet="CD_SongVersions">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="SongID" ColumnName="SongID" />
+          <ScalarProperty Name="SongVersionsID" ColumnName="SongVersionsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Users">
+      <EntityTypeMapping TypeName="MSSQL_tzuraModel.CD_Users">
+        <MappingFragment StoreEntitySet="CD_Users">
+          <ScalarProperty Name="LastVisitDate" ColumnName="LastVisitDate" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="BirthDateHeb" ColumnName="BirthDateHeb" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CD_DataModelStoreContainer" CdmEntityContainer="CD_DataEntities">
+    <EntitySetMapping Name="CD_Countries">
+      <EntityTypeMapping TypeName="CD_DataModel.CD_Countries">
+        <MappingFragment StoreEntitySet="CD_Countries">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_EntityTypes">
+      <EntityTypeMapping TypeName="CD_DataModel.CD_EntityTypes">
+        <MappingFragment StoreEntitySet="CD_EntityTypes">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Languages">
+      <EntityTypeMapping TypeName="CD_DataModel.CD_Languages">
+        <MappingFragment StoreEntitySet="CD_Languages">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Users">
+      <EntityTypeMapping TypeName="CD_DataModel.CD_Users">
+        <MappingFragment StoreEntitySet="CD_Users">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="LastVisitIP" ColumnName="LastVisitIP" />
+          <ScalarProperty Name="LastVisitDate" ColumnName="LastVisitDate" />
+          <ScalarProperty Name="EGenderID" ColumnName="EGenderID" />
+          <ScalarProperty Name="BirthDateHeb" ColumnName="BirthDateHeb" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

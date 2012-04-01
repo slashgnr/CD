@@ -1,0 +1,1532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MusicBrainzModelStoreContainer" CdmEntityContainer="MusicBrainzEntities">
+    <EntitySetMapping Name="annotations">
+      <EntityTypeMapping TypeName="MusicBrainzModel.annotation">
+        <MappingFragment StoreEntitySet="annotation">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="changelog" ColumnName="changelog" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artists">
+      <EntityTypeMapping TypeName="MusicBrainzModel.artist">
+        <MappingFragment StoreEntitySet="artist">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="ipi_code" ColumnName="ipi_code" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="end_date_day" ColumnName="end_date_day" />
+          <ScalarProperty Name="end_date_month" ColumnName="end_date_month" />
+          <ScalarProperty Name="end_date_year" ColumnName="end_date_year" />
+          <ScalarProperty Name="begin_date_day" ColumnName="begin_date_day" />
+          <ScalarProperty Name="begin_date_month" ColumnName="begin_date_month" />
+          <ScalarProperty Name="begin_date_year" ColumnName="begin_date_year" />
+          <ScalarProperty Name="sort_name" ColumnName="sort_name" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artist_alias">
+      <EntityTypeMapping TypeName="MusicBrainzModel.artist_alias">
+        <MappingFragment StoreEntitySet="artist_alias">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="artist" ColumnName="artist" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artist_credit">
+      <EntityTypeMapping TypeName="MusicBrainzModel.artist_credit">
+        <MappingFragment StoreEntitySet="artist_credit">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="ref_count" ColumnName="ref_count" />
+          <ScalarProperty Name="artist_count" ColumnName="artist_count" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artist_credit_name">
+      <EntityTypeMapping TypeName="MusicBrainzModel.artist_credit_name">
+        <MappingFragment StoreEntitySet="artist_credit_name">
+          <ScalarProperty Name="join_phrase" ColumnName="join_phrase" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="artist" ColumnName="artist" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="artist_credit" ColumnName="artist_credit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artist_gid_redirect">
+      <EntityTypeMapping TypeName="MusicBrainzModel.artist_gid_redirect">
+        <MappingFragment StoreEntitySet="artist_gid_redirect">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="new_id" ColumnName="new_id" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artist_meta">
+      <EntityTypeMapping TypeName="MusicBrainzModel.artist_meta">
+        <MappingFragment StoreEntitySet="artist_meta">
+          <ScalarProperty Name="rating_count" ColumnName="rating_count" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artist_name">
+      <EntityTypeMapping TypeName="MusicBrainzModel.artist_name">
+        <MappingFragment StoreEntitySet="artist_name">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artist_rating_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.artist_rating_raw">
+        <MappingFragment StoreEntitySet="artist_rating_raw">
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="artist" ColumnName="artist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artist_tag">
+      <EntityTypeMapping TypeName="MusicBrainzModel.artist_tag">
+        <MappingFragment StoreEntitySet="artist_tag">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="artist" ColumnName="artist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artist_tag_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.artist_tag_raw">
+        <MappingFragment StoreEntitySet="artist_tag_raw">
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="artist" ColumnName="artist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artist_type">
+      <EntityTypeMapping TypeName="MusicBrainzModel.artist_type">
+        <MappingFragment StoreEntitySet="artist_type">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="autoeditor_election">
+      <EntityTypeMapping TypeName="MusicBrainzModel.autoeditor_election">
+        <MappingFragment StoreEntitySet="autoeditor_election">
+          <ScalarProperty Name="close_time" ColumnName="close_time" />
+          <ScalarProperty Name="open_time" ColumnName="open_time" />
+          <ScalarProperty Name="propose_time" ColumnName="propose_time" />
+          <ScalarProperty Name="no_votes" ColumnName="no_votes" />
+          <ScalarProperty Name="yes_votes" ColumnName="yes_votes" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="seconder_2" ColumnName="seconder_2" />
+          <ScalarProperty Name="seconder_1" ColumnName="seconder_1" />
+          <ScalarProperty Name="proposer" ColumnName="proposer" />
+          <ScalarProperty Name="candidate" ColumnName="candidate" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="autoeditor_election_vote">
+      <EntityTypeMapping TypeName="MusicBrainzModel.autoeditor_election_vote">
+        <MappingFragment StoreEntitySet="autoeditor_election_vote">
+          <ScalarProperty Name="vote_time" ColumnName="vote_time" />
+          <ScalarProperty Name="vote" ColumnName="vote" />
+          <ScalarProperty Name="voter" ColumnName="voter" />
+          <ScalarProperty Name="autoeditor_election" ColumnName="autoeditor_election" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cdtocs">
+      <EntityTypeMapping TypeName="MusicBrainzModel.cdtoc">
+        <MappingFragment StoreEntitySet="cdtoc">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="degraded" ColumnName="degraded" />
+          <ScalarProperty Name="leadout_offset" ColumnName="leadout_offset" />
+          <ScalarProperty Name="track_count" ColumnName="track_count" />
+          <ScalarProperty Name="freedb_id" ColumnName="freedb_id" />
+          <ScalarProperty Name="discid" ColumnName="discid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cdtoc_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.cdtoc_raw">
+        <MappingFragment StoreEntitySet="cdtoc_raw">
+          <ScalarProperty Name="leadout_offset" ColumnName="leadout_offset" />
+          <ScalarProperty Name="track_count" ColumnName="track_count" />
+          <ScalarProperty Name="discid" ColumnName="discid" />
+          <ScalarProperty Name="release" ColumnName="release" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clientversions">
+      <EntityTypeMapping TypeName="MusicBrainzModel.clientversion">
+        <MappingFragment StoreEntitySet="clientversion">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="countries">
+      <EntityTypeMapping TypeName="MusicBrainzModel.country">
+        <MappingFragment StoreEntitySet="country">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="iso_code" ColumnName="iso_code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="edits">
+      <EntityTypeMapping TypeName="MusicBrainzModel.edit">
+        <MappingFragment StoreEntitySet="edit">
+          <ScalarProperty Name="quality" ColumnName="quality" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="expire_time" ColumnName="expire_time" />
+          <ScalarProperty Name="close_time" ColumnName="close_time" />
+          <ScalarProperty Name="open_time" ColumnName="open_time" />
+          <ScalarProperty Name="autoedit" ColumnName="autoedit" />
+          <ScalarProperty Name="no_votes" ColumnName="no_votes" />
+          <ScalarProperty Name="yes_votes" ColumnName="yes_votes" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="edit_artist">
+      <EntityTypeMapping TypeName="MusicBrainzModel.edit_artist">
+        <MappingFragment StoreEntitySet="edit_artist">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="artist" ColumnName="artist" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="edit_label">
+      <EntityTypeMapping TypeName="MusicBrainzModel.edit_label">
+        <MappingFragment StoreEntitySet="edit_label">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="edit_note">
+      <EntityTypeMapping TypeName="MusicBrainzModel.edit_note">
+        <MappingFragment StoreEntitySet="edit_note">
+          <ScalarProperty Name="post_time" ColumnName="post_time" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="edit_recording">
+      <EntityTypeMapping TypeName="MusicBrainzModel.edit_recording">
+        <MappingFragment StoreEntitySet="edit_recording">
+          <ScalarProperty Name="recording" ColumnName="recording" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="edit_release">
+      <EntityTypeMapping TypeName="MusicBrainzModel.edit_release">
+        <MappingFragment StoreEntitySet="edit_release">
+          <ScalarProperty Name="release" ColumnName="release" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="edit_release_group">
+      <EntityTypeMapping TypeName="MusicBrainzModel.edit_release_group">
+        <MappingFragment StoreEntitySet="edit_release_group">
+          <ScalarProperty Name="release_group" ColumnName="release_group" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="edit_url">
+      <EntityTypeMapping TypeName="MusicBrainzModel.edit_url">
+        <MappingFragment StoreEntitySet="edit_url">
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="edit_work">
+      <EntityTypeMapping TypeName="MusicBrainzModel.edit_work">
+        <MappingFragment StoreEntitySet="edit_work">
+          <ScalarProperty Name="work" ColumnName="work" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="editors">
+      <EntityTypeMapping TypeName="MusicBrainzModel.editor">
+        <MappingFragment StoreEntitySet="editor">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_failed" ColumnName="edits_failed" />
+          <ScalarProperty Name="auto_edits_accepted" ColumnName="auto_edits_accepted" />
+          <ScalarProperty Name="edits_rejected" ColumnName="edits_rejected" />
+          <ScalarProperty Name="edits_accepted" ColumnName="edits_accepted" />
+          <ScalarProperty Name="last_login_date" ColumnName="last_login_date" />
+          <ScalarProperty Name="email_confirm_date" ColumnName="email_confirm_date" />
+          <ScalarProperty Name="member_since" ColumnName="member_since" />
+          <ScalarProperty Name="bio" ColumnName="bio" />
+          <ScalarProperty Name="website" ColumnName="website" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="privs" ColumnName="privs" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="editor_collection">
+      <EntityTypeMapping TypeName="MusicBrainzModel.editor_collection">
+        <MappingFragment StoreEntitySet="editor_collection">
+          <ScalarProperty Name="public" ColumnName="public" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="editor_preference">
+      <EntityTypeMapping TypeName="MusicBrainzModel.editor_preference">
+        <MappingFragment StoreEntitySet="editor_preference">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="editor_subscribe_artist">
+      <EntityTypeMapping TypeName="MusicBrainzModel.editor_subscribe_artist">
+        <MappingFragment StoreEntitySet="editor_subscribe_artist">
+          <ScalarProperty Name="merged_by_edit" ColumnName="merged_by_edit" />
+          <ScalarProperty Name="deleted_by_edit" ColumnName="deleted_by_edit" />
+          <ScalarProperty Name="last_edit_sent" ColumnName="last_edit_sent" />
+          <ScalarProperty Name="artist" ColumnName="artist" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="editor_subscribe_editor">
+      <EntityTypeMapping TypeName="MusicBrainzModel.editor_subscribe_editor">
+        <MappingFragment StoreEntitySet="editor_subscribe_editor">
+          <ScalarProperty Name="last_edit_sent" ColumnName="last_edit_sent" />
+          <ScalarProperty Name="subscribed_editor" ColumnName="subscribed_editor" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="editor_subscribe_label">
+      <EntityTypeMapping TypeName="MusicBrainzModel.editor_subscribe_label">
+        <MappingFragment StoreEntitySet="editor_subscribe_label">
+          <ScalarProperty Name="merged_by_edit" ColumnName="merged_by_edit" />
+          <ScalarProperty Name="deleted_by_edit" ColumnName="deleted_by_edit" />
+          <ScalarProperty Name="last_edit_sent" ColumnName="last_edit_sent" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="editor_watch_artist">
+      <EntityTypeMapping TypeName="MusicBrainzModel.editor_watch_artist">
+        <MappingFragment StoreEntitySet="editor_watch_artist">
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="artist" ColumnName="artist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="editor_watch_preferences">
+      <EntityTypeMapping TypeName="MusicBrainzModel.editor_watch_preferences">
+        <MappingFragment StoreEntitySet="editor_watch_preferences">
+          <ScalarProperty Name="last_checked" ColumnName="last_checked" />
+          <ScalarProperty Name="notification_timeframe" ColumnName="notification_timeframe" />
+          <ScalarProperty Name="notify_via_email" ColumnName="notify_via_email" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="editor_watch_release_group_type">
+      <EntityTypeMapping TypeName="MusicBrainzModel.editor_watch_release_group_type">
+        <MappingFragment StoreEntitySet="editor_watch_release_group_type">
+          <ScalarProperty Name="release_group_type" ColumnName="release_group_type" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="editor_watch_release_status">
+      <EntityTypeMapping TypeName="MusicBrainzModel.editor_watch_release_status">
+        <MappingFragment StoreEntitySet="editor_watch_release_status">
+          <ScalarProperty Name="release_status" ColumnName="release_status" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genders">
+      <EntityTypeMapping TypeName="MusicBrainzModel.gender">
+        <MappingFragment StoreEntitySet="gender">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="isrcs">
+      <EntityTypeMapping TypeName="MusicBrainzModel.isrc">
+        <MappingFragment StoreEntitySet="isrc">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="isrc1" ColumnName="isrc" />
+          <ScalarProperty Name="recording" ColumnName="recording" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_artist_artist">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_artist_artist">
+        <MappingFragment StoreEntitySet="l_artist_artist">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_artist_label">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_artist_label">
+        <MappingFragment StoreEntitySet="l_artist_label">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_artist_recording">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_artist_recording">
+        <MappingFragment StoreEntitySet="l_artist_recording">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_artist_release">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_artist_release">
+        <MappingFragment StoreEntitySet="l_artist_release">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_artist_release_group">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_artist_release_group">
+        <MappingFragment StoreEntitySet="l_artist_release_group">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_artist_url">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_artist_url">
+        <MappingFragment StoreEntitySet="l_artist_url">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_artist_work">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_artist_work">
+        <MappingFragment StoreEntitySet="l_artist_work">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_label_label">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_label_label">
+        <MappingFragment StoreEntitySet="l_label_label">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_label_recording">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_label_recording">
+        <MappingFragment StoreEntitySet="l_label_recording">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_label_release">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_label_release">
+        <MappingFragment StoreEntitySet="l_label_release">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_label_release_group">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_label_release_group">
+        <MappingFragment StoreEntitySet="l_label_release_group">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_label_url">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_label_url">
+        <MappingFragment StoreEntitySet="l_label_url">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_label_work">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_label_work">
+        <MappingFragment StoreEntitySet="l_label_work">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_recording_recording">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_recording_recording">
+        <MappingFragment StoreEntitySet="l_recording_recording">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_recording_release">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_recording_release">
+        <MappingFragment StoreEntitySet="l_recording_release">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_recording_release_group">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_recording_release_group">
+        <MappingFragment StoreEntitySet="l_recording_release_group">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_recording_url">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_recording_url">
+        <MappingFragment StoreEntitySet="l_recording_url">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_recording_work">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_recording_work">
+        <MappingFragment StoreEntitySet="l_recording_work">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_release_group_release_group">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_release_group_release_group">
+        <MappingFragment StoreEntitySet="l_release_group_release_group">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_release_group_url">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_release_group_url">
+        <MappingFragment StoreEntitySet="l_release_group_url">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_release_group_work">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_release_group_work">
+        <MappingFragment StoreEntitySet="l_release_group_work">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_release_release">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_release_release">
+        <MappingFragment StoreEntitySet="l_release_release">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_release_release_group">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_release_release_group">
+        <MappingFragment StoreEntitySet="l_release_release_group">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_release_url">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_release_url">
+        <MappingFragment StoreEntitySet="l_release_url">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_release_work">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_release_work">
+        <MappingFragment StoreEntitySet="l_release_work">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_url_url">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_url_url">
+        <MappingFragment StoreEntitySet="l_url_url">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_url_work">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_url_work">
+        <MappingFragment StoreEntitySet="l_url_work">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="l_work_work">
+      <EntityTypeMapping TypeName="MusicBrainzModel.l_work_work">
+        <MappingFragment StoreEntitySet="l_work_work">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="entity1" ColumnName="entity1" />
+          <ScalarProperty Name="entity0" ColumnName="entity0" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="labels">
+      <EntityTypeMapping TypeName="MusicBrainzModel.label">
+        <MappingFragment StoreEntitySet="label">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="ipi_code" ColumnName="ipi_code" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="label_code" ColumnName="label_code" />
+          <ScalarProperty Name="end_date_day" ColumnName="end_date_day" />
+          <ScalarProperty Name="end_date_month" ColumnName="end_date_month" />
+          <ScalarProperty Name="end_date_year" ColumnName="end_date_year" />
+          <ScalarProperty Name="begin_date_day" ColumnName="begin_date_day" />
+          <ScalarProperty Name="begin_date_month" ColumnName="begin_date_month" />
+          <ScalarProperty Name="begin_date_year" ColumnName="begin_date_year" />
+          <ScalarProperty Name="sort_name" ColumnName="sort_name" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="label_alias">
+      <EntityTypeMapping TypeName="MusicBrainzModel.label_alias">
+        <MappingFragment StoreEntitySet="label_alias">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="label_annotation">
+      <EntityTypeMapping TypeName="MusicBrainzModel.label_annotation">
+        <MappingFragment StoreEntitySet="label_annotation">
+          <ScalarProperty Name="annotation" ColumnName="annotation" />
+          <ScalarProperty Name="label" ColumnName="label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="label_gid_redirect">
+      <EntityTypeMapping TypeName="MusicBrainzModel.label_gid_redirect">
+        <MappingFragment StoreEntitySet="label_gid_redirect">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="new_id" ColumnName="new_id" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="label_meta">
+      <EntityTypeMapping TypeName="MusicBrainzModel.label_meta">
+        <MappingFragment StoreEntitySet="label_meta">
+          <ScalarProperty Name="rating_count" ColumnName="rating_count" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="label_name">
+      <EntityTypeMapping TypeName="MusicBrainzModel.label_name">
+        <MappingFragment StoreEntitySet="label_name">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="label_rating_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.label_rating_raw">
+        <MappingFragment StoreEntitySet="label_rating_raw">
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="label" ColumnName="label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="label_tag">
+      <EntityTypeMapping TypeName="MusicBrainzModel.label_tag">
+        <MappingFragment StoreEntitySet="label_tag">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="label" ColumnName="label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="label_tag_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.label_tag_raw">
+        <MappingFragment StoreEntitySet="label_tag_raw">
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="label" ColumnName="label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="label_type">
+      <EntityTypeMapping TypeName="MusicBrainzModel.label_type">
+        <MappingFragment StoreEntitySet="label_type">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="languages">
+      <EntityTypeMapping TypeName="MusicBrainzModel.language">
+        <MappingFragment StoreEntitySet="language">
+          <ScalarProperty Name="frequency" ColumnName="frequency" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="iso_code_2" ColumnName="iso_code_2" />
+          <ScalarProperty Name="iso_code_3b" ColumnName="iso_code_3b" />
+          <ScalarProperty Name="iso_code_3t" ColumnName="iso_code_3t" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="links">
+      <EntityTypeMapping TypeName="MusicBrainzModel.link">
+        <MappingFragment StoreEntitySet="link">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="attribute_count" ColumnName="attribute_count" />
+          <ScalarProperty Name="end_date_day" ColumnName="end_date_day" />
+          <ScalarProperty Name="end_date_month" ColumnName="end_date_month" />
+          <ScalarProperty Name="end_date_year" ColumnName="end_date_year" />
+          <ScalarProperty Name="begin_date_day" ColumnName="begin_date_day" />
+          <ScalarProperty Name="begin_date_month" ColumnName="begin_date_month" />
+          <ScalarProperty Name="begin_date_year" ColumnName="begin_date_year" />
+          <ScalarProperty Name="link_type" ColumnName="link_type" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="link_attribute">
+      <EntityTypeMapping TypeName="MusicBrainzModel.link_attribute">
+        <MappingFragment StoreEntitySet="link_attribute">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="attribute_type" ColumnName="attribute_type" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="link_attribute_type">
+      <EntityTypeMapping TypeName="MusicBrainzModel.link_attribute_type">
+        <MappingFragment StoreEntitySet="link_attribute_type">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+          <ScalarProperty Name="child_order" ColumnName="child_order" />
+          <ScalarProperty Name="root" ColumnName="root" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="link_type">
+      <EntityTypeMapping TypeName="MusicBrainzModel.link_type">
+        <MappingFragment StoreEntitySet="link_type">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="short_link_phrase" ColumnName="short_link_phrase" />
+          <ScalarProperty Name="reverse_link_phrase" ColumnName="reverse_link_phrase" />
+          <ScalarProperty Name="link_phrase" ColumnName="link_phrase" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="entity_type1" ColumnName="entity_type1" />
+          <ScalarProperty Name="entity_type0" ColumnName="entity_type0" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+          <ScalarProperty Name="child_order" ColumnName="child_order" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="link_type_attribute_type">
+      <EntityTypeMapping TypeName="MusicBrainzModel.link_type_attribute_type">
+        <MappingFragment StoreEntitySet="link_type_attribute_type">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="max" ColumnName="max" />
+          <ScalarProperty Name="min" ColumnName="min" />
+          <ScalarProperty Name="attribute_type" ColumnName="attribute_type" />
+          <ScalarProperty Name="link_type" ColumnName="link_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="media">
+      <EntityTypeMapping TypeName="MusicBrainzModel.medium">
+        <MappingFragment StoreEntitySet="medium">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="format" ColumnName="format" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="release" ColumnName="release" />
+          <ScalarProperty Name="tracklist" ColumnName="tracklist" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="medium_cdtoc">
+      <EntityTypeMapping TypeName="MusicBrainzModel.medium_cdtoc">
+        <MappingFragment StoreEntitySet="medium_cdtoc">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="cdtoc" ColumnName="cdtoc" />
+          <ScalarProperty Name="medium" ColumnName="medium" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="medium_format">
+      <EntityTypeMapping TypeName="MusicBrainzModel.medium_format">
+        <MappingFragment StoreEntitySet="medium_format">
+          <ScalarProperty Name="has_discids" ColumnName="has_discids" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="child_order" ColumnName="child_order" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="puids">
+      <EntityTypeMapping TypeName="MusicBrainzModel.puid">
+        <MappingFragment StoreEntitySet="puid">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="puid1" ColumnName="puid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recordings">
+      <EntityTypeMapping TypeName="MusicBrainzModel.recording">
+        <MappingFragment StoreEntitySet="recording">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="artist_credit" ColumnName="artist_credit" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recording_annotation">
+      <EntityTypeMapping TypeName="MusicBrainzModel.recording_annotation">
+        <MappingFragment StoreEntitySet="recording_annotation">
+          <ScalarProperty Name="annotation" ColumnName="annotation" />
+          <ScalarProperty Name="recording" ColumnName="recording" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recording_gid_redirect">
+      <EntityTypeMapping TypeName="MusicBrainzModel.recording_gid_redirect">
+        <MappingFragment StoreEntitySet="recording_gid_redirect">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="new_id" ColumnName="new_id" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recording_meta">
+      <EntityTypeMapping TypeName="MusicBrainzModel.recording_meta">
+        <MappingFragment StoreEntitySet="recording_meta">
+          <ScalarProperty Name="rating_count" ColumnName="rating_count" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recording_puid">
+      <EntityTypeMapping TypeName="MusicBrainzModel.recording_puid">
+        <MappingFragment StoreEntitySet="recording_puid">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="recording" ColumnName="recording" />
+          <ScalarProperty Name="puid" ColumnName="puid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recording_rating_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.recording_rating_raw">
+        <MappingFragment StoreEntitySet="recording_rating_raw">
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="recording" ColumnName="recording" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recording_tag">
+      <EntityTypeMapping TypeName="MusicBrainzModel.recording_tag">
+        <MappingFragment StoreEntitySet="recording_tag">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="recording" ColumnName="recording" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recording_tag_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.recording_tag_raw">
+        <MappingFragment StoreEntitySet="recording_tag_raw">
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="recording" ColumnName="recording" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="releases">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release">
+        <MappingFragment StoreEntitySet="release">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="quality" ColumnName="quality" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="barcode" ColumnName="barcode" />
+          <ScalarProperty Name="date_day" ColumnName="date_day" />
+          <ScalarProperty Name="date_month" ColumnName="date_month" />
+          <ScalarProperty Name="date_year" ColumnName="date_year" />
+          <ScalarProperty Name="script" ColumnName="script" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="packaging" ColumnName="packaging" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="release_group" ColumnName="release_group" />
+          <ScalarProperty Name="artist_credit" ColumnName="artist_credit" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_annotation">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_annotation">
+        <MappingFragment StoreEntitySet="release_annotation">
+          <ScalarProperty Name="annotation" ColumnName="annotation" />
+          <ScalarProperty Name="release" ColumnName="release" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_coverart">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_coverart">
+        <MappingFragment StoreEntitySet="release_coverart">
+          <ScalarProperty Name="cover_art_url" ColumnName="cover_art_url" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_gid_redirect">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_gid_redirect">
+        <MappingFragment StoreEntitySet="release_gid_redirect">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="new_id" ColumnName="new_id" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_group">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_group">
+        <MappingFragment StoreEntitySet="release_group">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="artist_credit" ColumnName="artist_credit" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_group_annotation">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_group_annotation">
+        <MappingFragment StoreEntitySet="release_group_annotation">
+          <ScalarProperty Name="annotation" ColumnName="annotation" />
+          <ScalarProperty Name="release_group" ColumnName="release_group" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_group_gid_redirect">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_group_gid_redirect">
+        <MappingFragment StoreEntitySet="release_group_gid_redirect">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="new_id" ColumnName="new_id" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_group_meta">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_group_meta">
+        <MappingFragment StoreEntitySet="release_group_meta">
+          <ScalarProperty Name="rating_count" ColumnName="rating_count" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="first_release_date_day" ColumnName="first_release_date_day" />
+          <ScalarProperty Name="first_release_date_month" ColumnName="first_release_date_month" />
+          <ScalarProperty Name="first_release_date_year" ColumnName="first_release_date_year" />
+          <ScalarProperty Name="release_count" ColumnName="release_count" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_group_rating_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_group_rating_raw">
+        <MappingFragment StoreEntitySet="release_group_rating_raw">
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="release_group" ColumnName="release_group" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_group_tag">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_group_tag">
+        <MappingFragment StoreEntitySet="release_group_tag">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="release_group" ColumnName="release_group" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_group_tag_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_group_tag_raw">
+        <MappingFragment StoreEntitySet="release_group_tag_raw">
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="release_group" ColumnName="release_group" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_group_type">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_group_type">
+        <MappingFragment StoreEntitySet="release_group_type">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_label">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_label">
+        <MappingFragment StoreEntitySet="release_label">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="catalog_number" ColumnName="catalog_number" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="release" ColumnName="release" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_meta">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_meta">
+        <MappingFragment StoreEntitySet="release_meta">
+          <ScalarProperty Name="cover_art_presence" ColumnName="cover_art_presence" />
+          <ScalarProperty Name="amazon_store" ColumnName="amazon_store" />
+          <ScalarProperty Name="amazon_asin" ColumnName="amazon_asin" />
+          <ScalarProperty Name="info_url" ColumnName="info_url" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_name">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_name">
+        <MappingFragment StoreEntitySet="release_name">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_packaging">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_packaging">
+        <MappingFragment StoreEntitySet="release_packaging">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_raw">
+        <MappingFragment StoreEntitySet="release_raw">
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="barcode" ColumnName="barcode" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="modify_count" ColumnName="modify_count" />
+          <ScalarProperty Name="lookup_count" ColumnName="lookup_count" />
+          <ScalarProperty Name="last_modified" ColumnName="last_modified" />
+          <ScalarProperty Name="added" ColumnName="added" />
+          <ScalarProperty Name="artist" ColumnName="artist" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_status">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_status">
+        <MappingFragment StoreEntitySet="release_status">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_tag">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_tag">
+        <MappingFragment StoreEntitySet="release_tag">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="release" ColumnName="release" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="release_tag_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.release_tag_raw">
+        <MappingFragment StoreEntitySet="release_tag_raw">
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="release" ColumnName="release" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="replication_control">
+      <EntityTypeMapping TypeName="MusicBrainzModel.replication_control">
+        <MappingFragment StoreEntitySet="replication_control">
+          <ScalarProperty Name="last_replication_date" ColumnName="last_replication_date" />
+          <ScalarProperty Name="current_replication_sequence" ColumnName="current_replication_sequence" />
+          <ScalarProperty Name="current_schema_sequence" ColumnName="current_schema_sequence" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="scripts">
+      <EntityTypeMapping TypeName="MusicBrainzModel.script">
+        <MappingFragment StoreEntitySet="script">
+          <ScalarProperty Name="frequency" ColumnName="frequency" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="iso_number" ColumnName="iso_number" />
+          <ScalarProperty Name="iso_code" ColumnName="iso_code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="script_language">
+      <EntityTypeMapping TypeName="MusicBrainzModel.script_language">
+        <MappingFragment StoreEntitySet="script_language">
+          <ScalarProperty Name="frequency" ColumnName="frequency" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="script" ColumnName="script" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statistics">
+      <EntityTypeMapping TypeName="MusicBrainzModel.statistic">
+        <MappingFragment StoreEntitySet="statistic">
+          <ScalarProperty Name="date_collected" ColumnName="date_collected" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tags">
+      <EntityTypeMapping TypeName="MusicBrainzModel.tag">
+        <MappingFragment StoreEntitySet="tag">
+          <ScalarProperty Name="ref_count" ColumnName="ref_count" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tag_relation">
+      <EntityTypeMapping TypeName="MusicBrainzModel.tag_relation">
+        <MappingFragment StoreEntitySet="tag_relation">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="tag2" ColumnName="tag2" />
+          <ScalarProperty Name="tag1" ColumnName="tag1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tracks">
+      <EntityTypeMapping TypeName="MusicBrainzModel.track">
+        <MappingFragment StoreEntitySet="track">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="artist_credit" ColumnName="artist_credit" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="tracklist" ColumnName="tracklist" />
+          <ScalarProperty Name="recording" ColumnName="recording" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="track_name">
+      <EntityTypeMapping TypeName="MusicBrainzModel.track_name">
+        <MappingFragment StoreEntitySet="track_name">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="track_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.track_raw">
+        <MappingFragment StoreEntitySet="track_raw">
+          <ScalarProperty Name="sequence" ColumnName="sequence" />
+          <ScalarProperty Name="artist" ColumnName="artist" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="release" ColumnName="release" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tracklists">
+      <EntityTypeMapping TypeName="MusicBrainzModel.tracklist">
+        <MappingFragment StoreEntitySet="tracklist">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="track_count" ColumnName="track_count" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urls">
+      <EntityTypeMapping TypeName="MusicBrainzModel.url">
+        <MappingFragment StoreEntitySet="url">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="ref_count" ColumnName="ref_count" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="url1" ColumnName="url" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="url_gid_redirect">
+      <EntityTypeMapping TypeName="MusicBrainzModel.url_gid_redirect">
+        <MappingFragment StoreEntitySet="url_gid_redirect">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="new_id" ColumnName="new_id" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="votes">
+      <EntityTypeMapping TypeName="MusicBrainzModel.vote">
+        <MappingFragment StoreEntitySet="vote">
+          <ScalarProperty Name="superseded" ColumnName="superseded" />
+          <ScalarProperty Name="vote_time" ColumnName="vote_time" />
+          <ScalarProperty Name="vote1" ColumnName="vote" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="works">
+      <EntityTypeMapping TypeName="MusicBrainzModel.work">
+        <MappingFragment StoreEntitySet="work">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="iswc" ColumnName="iswc" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="artist_credit" ColumnName="artist_credit" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="work_alias">
+      <EntityTypeMapping TypeName="MusicBrainzModel.work_alias">
+        <MappingFragment StoreEntitySet="work_alias">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="edits_pending" ColumnName="edits_pending" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="work" ColumnName="work" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="work_annotation">
+      <EntityTypeMapping TypeName="MusicBrainzModel.work_annotation">
+        <MappingFragment StoreEntitySet="work_annotation">
+          <ScalarProperty Name="annotation" ColumnName="annotation" />
+          <ScalarProperty Name="work" ColumnName="work" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="work_gid_redirect">
+      <EntityTypeMapping TypeName="MusicBrainzModel.work_gid_redirect">
+        <MappingFragment StoreEntitySet="work_gid_redirect">
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="new_id" ColumnName="new_id" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="work_meta">
+      <EntityTypeMapping TypeName="MusicBrainzModel.work_meta">
+        <MappingFragment StoreEntitySet="work_meta">
+          <ScalarProperty Name="rating_count" ColumnName="rating_count" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="work_name">
+      <EntityTypeMapping TypeName="MusicBrainzModel.work_name">
+        <MappingFragment StoreEntitySet="work_name">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="work_rating_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.work_rating_raw">
+        <MappingFragment StoreEntitySet="work_rating_raw">
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="work" ColumnName="work" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="work_tag">
+      <EntityTypeMapping TypeName="MusicBrainzModel.work_tag">
+        <MappingFragment StoreEntitySet="work_tag">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="work" ColumnName="work" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="work_tag_raw">
+      <EntityTypeMapping TypeName="MusicBrainzModel.work_tag_raw">
+        <MappingFragment StoreEntitySet="work_tag_raw">
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="editor" ColumnName="editor" />
+          <ScalarProperty Name="work" ColumnName="work" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="work_type">
+      <EntityTypeMapping TypeName="MusicBrainzModel.work_type">
+        <MappingFragment StoreEntitySet="work_type">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="artist_annotation" TypeName="MusicBrainzModel.artist_annotation" StoreEntitySet="artist_annotation">
+      <EndProperty Name="artist">
+        <ScalarProperty Name="id" ColumnName="artist" />
+      </EndProperty>
+      <EndProperty Name="annotation">
+        <ScalarProperty Name="id" ColumnName="annotation" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="editor_collection_release" TypeName="MusicBrainzModel.editor_collection_release" StoreEntitySet="editor_collection_release">
+      <EndProperty Name="release">
+        <ScalarProperty Name="id" ColumnName="release" />
+      </EndProperty>
+      <EndProperty Name="editor_collection">
+        <ScalarProperty Name="id" ColumnName="collection" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

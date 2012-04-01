@@ -1,0 +1,146 @@
+
+#SlideItMoo_outer {
+	overflow: hidden;
+	width: 700px; 
+	height: 140px;
+	margin: 0 auto; 
+	background: none; 
+	display:block; 
+	position:relative; 
+	padding: 0;
+}
+/* create custom forward-backward buttons for this container */
+#SlideItMoo_outer .SlideItMoo_forward,
+#SlideItMoo_outer .SlideItMoo_back{ 
+	display:block; 
+	position:absolute; 
+	cursor:pointer; 
+	width:25px; 
+	height: 140px; 
+	bottom:0px; 
+	right: 0px; 
+	background:url(../images/slideitmoo_forward.png) no-repeat center;  
+}
+#SlideItMoo_outer .SlideItMoo_back { 
+	left:0px; 
+	background:url(../images/slideitmoo_back.png) no-repeat center;  
+}
+
+/* the width is set to show the number of thumbnails that will be visible */
+#SlideItMoo_inner{ 
+	position:relative ; 
+	overflow:hidden ; 
+	width: 680px ; /* set a display width to make the slider look good in case js is disabled */
+	margin:0px auto 0px;
+	padding:10px 0px 10px;
+}
+/* the thumbnails container; set a width on it so everything will be fine */
+#SlideItMoo_items { 
+	display:block; 
+	position:relative; 
+}
+/* single element design */
+#SlideItMoo_items div.SlideItMoo_element { 
+	display:block; 
+	position:relative; 
+	float:left; 
+	margin:0px 15px 0px; 
+	font-size:11px; 
+	width:128px; 
+	text-align:center; 
+	font-family: Verdana, Geneva, sans-serif;
+	color:#000000;
+}
+#SlideItMoo_items a { padding:0px; margin:3px 0px 3px; clear:both; display:block; background:none; padding:2px; }
+#SlideItMoo_items a img{ border:none; }
+
+.rtl{ direction:rtl}
+
+
+
+
+
+
+
+div,blockquote,img,label,p,h1,h2,h3,h4,h5,h6,pre,ul,ol,li,dl,dt,dd,form,a,fieldset,input,th,td{border:0;outline:none;margin:0;padding:0;}
+
+ul, ol{list-style:none;}
+.text-center {text-align: center; padding: 10px 0;}
+.wrap {width: 960px; margin: 0 auto;}
+
+/* Tutorial CSS */
+/*Form styles*/
+.styled {
+font: 15px Arial, sans-serif; 
+width: 422px; 
+margin: 40px auto; 
+background: url(../images/bg_form.png) no-repeat 0 0; 
+padding-top: 20px;
+}
+.styled fieldset {
+background: url(../images/bg_form.png) no-repeat 0 100%; 
+padding: 0 25px 20px 25px; 
+position: relative;
+}
+.styled fieldset h3 { 
+font: 24px bold Arial, sans-serif; 
+color: #555;
+margin-bottom: 0.5em;
+}
+/* Form rows */
+.styled fieldset li.form-row {
+margin-bottom: 5px; 
+padding: 3px 0; 
+clear: both; 
+position: relative;
+}
+.styled label {
+display: block; 
+font-weight: bold; 
+float: right; 
+width: 100px; 
+line-height: 24px; 
+padding-top: 4px; 
+color: #555;
+}
+.styled label.double {
+padding-top: 0; 
+line-height: 20px; 
+margin-top: -3px;
+}
+.styled fieldset li.button-row {
+margin-bottom: 0; 
+padding: 5px 0 0; 
+text-align: right;
+}
+/* Text input styles */
+/* Default */
+.styled input.text-input {
+height: 22px;
+width: 254px;
+padding: 5px 8px; 
+background: url(../images/bg_input.png) no-repeat 0 0;  
+border: none;   
+font: normal 15px Arial, sans-serif;
+color: #333;
+line-height: 1em;
+}
+
+/* Form Validation */
+.styled span.error {
+font: bold 11px Arial, sans-serif;
+color:#fff;
+text-shadow: 1px 1px 1px #000;
+display: none; 
+background: url(../images/arrow_error.png) no-repeat 0 center; 
+height: 11px;
+padding: 7px 15px 10px 20px; 
+line-height: 1em; 
+position: absolute; 
+top: 3px; 
+right: 0; 
+border-right: 1px solid #6c0202;
+}
+.styled fieldset li.error input.text-input {
+background-position: 0 -64px;
+}

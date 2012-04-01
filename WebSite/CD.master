@@ -1,0 +1,230 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CD.master.cs" Inherits="CD" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Albums</title>  <link href="Styles/templatemo_style.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/styles.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    <script src="Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript" src="scripts/mootools-1.2.1-core.js"></script>
+    <script language="javascript" type="text/javascript" src="scripts/mootools-1.2-more.js"></script>
+    <script language="javascript" type="text/javascript" src="scripts/slideitmoo-1.1.js"></script>
+    <script language="javascript" type="text/javascript">
+	window.addEvents({
+		'domready': function(){
+			/* thumbnails example , div containers */
+			new SlideItMoo({
+						overallContainer: 'SlideItMoo_outer',
+						elementScrolled: 'SlideItMoo_inner',
+						thumbsContainer: 'SlideItMoo_items',		
+						itemsVisible: 4,
+						elemsSlide: 2,
+						duration: 200,
+						itemsSelector: '.SlideItMoo_element',
+						itemWidth: 158,
+						showControls:1});
+		},
+		
+	});
+
+    </script>  </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="templatemo_wrapper">
+            <div id="templatemo_main_column">
+                <div id="templatemo_header">
+                    <div id="site_title">
+                        <h1>
+                            <a href="http://www.templatemo.com" target="_parent">
+                                <img src="images/templatemo_logo.jpg" alt="Gadget Store" />
+                                <span>עוטף אלבום</span> </a>
+                        </h1>
+                    </div>
+                </div>
+                <!-- end of templatemo_header -->
+                <div id="templatemo_menu">
+                    <ul>
+                        <li><a href="default.aspx" class="current"><span></span>ראשי</a></li>
+                        <li><a href="regist.aspx" target="_parent"><span></span>בא תצטרף</a></li>
+                        <li><a href="http://www.templatemo.com/page/1" target="_parent"><span></span>חדשות</a></li>
+                        <li><a href="http://www.koflash.com" target="_parent"><span></span>על הפרויקט</a></li>
+                        <li><a href="#"><span></span>צור קשר</a></li>
+                    </ul>
+                </div>
+                <!-- end of templatemo_menu -->
+                <div id="templatemo_banner">
+                    <div id="product_gallery">
+                        <div id="SlideItMoo_outer">
+                            <div id="SlideItMoo_inner">
+                                <div id="SlideItMoo_items">
+                                    <div class="SlideItMoo_element">
+                                        <a href="http://www.templatemo.com/page/1" target="_parent">
+                                            <img src="images/templatemo_product_01.png" alt="product 1" /></a>
+                                    </div>
+                                    <div class="SlideItMoo_element">
+                                        <a href="http://www.templatemo.com/page/2" target="_parent">
+                                            <img src="images/templatemo_product_02.png" alt="product 2" /></a>
+                                    </div>
+                                    <div class="SlideItMoo_element">
+                                        <a href="http://www.templatemo.com/page/3" target="_parent">
+                                            <img src="images/templatemo_product_03.png" alt="product 3" /></a>
+                                    </div>
+                                    <div class="SlideItMoo_element">
+                                        <a href="http://www.templatemo.com/page/4" target="_parent">
+                                            <img src="images/templatemo_product_04.png" alt="product 4" /></a>
+                                    </div>
+                                    <div class="SlideItMoo_element">
+                                        <a href="http://www.templatemo.com/page/5" target="_parent">
+                                            <img src="images/templatemo_product_05.png" alt="product 5" /></a>
+                                    </div>
+                                    <div class="SlideItMoo_element">
+                                        <a href="http://www.templatemo.com/page/6" target="_parent">
+                                            <img src="images/templatemo_product_06.png" alt="product 6" /></a>
+                                    </div>
+                                    <div class="SlideItMoo_element">
+                                        <a href="http://www.templatemo.com/page/7" target="_parent">
+                                            <img src="images/templatemo_product_07.png" alt="product 7" /></a>
+                                    </div>
+                                    <div class="SlideItMoo_element">
+                                        <a href="http://www.templatemo.com/page/8" target="_parent">
+                                            <img src="images/templatemo_product_08.png" alt="product 8" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of product gallery -->
+                    <div class="cleaner">
+                    </div>
+                </div>
+                <!-- end of templatemo_banner -->
+                <div id="templatemo_content_column">
+                    <div id="templatemo_left_sidebar">
+                        <span class="top"></span><span class="bottom"></span>
+                        <div class="left_sidebar_section">
+                            <h2>
+                                Categories</h2>
+                            <ul class="categories_list">
+                                <li><a href="#">עטיפות חדשות</a></li>
+                                <li><a href="#">העלה עטיפה</a></li>
+                                <li><a href="#">זום על אלבום</a></li>
+                                <li><a href="#">דרג את האלבומים שלך</a></li>
+                                <li><a href="#">מה קרה בסבנטיז</a></li>
+                                <li><a href="#">תביא אלבום</a></li>
+                                <li><a href="#">חפש</a></li>
+                            </ul>
+                        </div>
+                        <div class="left_sidebar_section">
+                            <h2>
+                                הנחות</h2>
+                            <a href="http://www.templatemo.com/page/5"></a>
+                            <p>
+                                קנה היום שלם מחר</p>
+                            <div class="discount">
+                                <span>30% off</span> | <a href="#">Read more</a></div>
+                        </div>
+                    </div>
+                    <!-- end of templatemo_left_sidebar -->
+                    <div id="templatemo_content">
+                        <div class="content_section">
+                            
+                            <asp:ContentPlaceHolder ID="PageMainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    
+                    </div>
+                    <!-- end of content -->
+                </div>
+                <!-- end of content column -->
+            </div>
+            <!-- end of templatemo_main_column -->
+            <div id="templatemo_right_sidebar">
+                <span class="top"></span><span class="bottom"></span>
+                <div id="twitter">
+                    <a href="http://www.facebook.com/templatemo">Follow Us</a></div>
+                <div class="right_sidebar_section">
+                    <h2>
+                        התחברות</h2>
+                    
+                    <label>
+                        שם משתמש</label><asp:TextBox ID="loginUsername" class="input_field"  runat="server"></asp:TextBox>
+                    
+                    <label>
+                        סיסמה</label> <asp:TextBox ID="loginPassword"  TextMode="Password" class="input_field" runat="server" ></asp:TextBox>
+                    <asp:Button ID="btnLogin" runat="server" Text="התחבר"  class="submit_btn" 
+                        onclick="btnLogin_Click" />
+                    <asp:Label ID="LblLoginError" runat="server" ></asp:Label>
+                    
+                    <div class="cleaner">
+                    </div>
+                </div>
+                <div class="right_sidebar_section">
+                    <h2>
+                        Latest Promotions</h2>
+                    <div class="news_section">
+                        <h3>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur </a>
+                        </h3>
+                        <p>
+                            Maecenas tellus erat, dictum vel semper a, dapibus ac elit. Nunc rutrum pretium
+                            porta.</p>
+                    </div>
+                    <div class="news_section">
+                        <h3>
+                            <a href="#">Cras eget est vel magna gravida lacinia habitasse platea </a>
+                        </h3>
+                        <p>
+                            Cras eget est vel magna gravida lacinia. In hac habitasse platea dictumst. Quisque
+                            in ligula lectus, non faucibus purus.</p>
+                    </div>
+                    <div class="news_section">
+                        <h3>
+                            <a href="#">Sed id leo nec nulla sagittis iaculis sed id erat</a></h3>
+                        <p>
+                            Aenean facilisis, risus a feugiat interdum, tortor enim porta nisi, sed aliquet
+                            eros felis ac ante.</p>
+                    </div>
+                </div>
+                <div class="right_sidebar_section">
+                    <h2>
+                        מנוי לניוזלטר</h2>
+                    <form action="#" method="get">
+                    <label>
+                        לאן לשלוח את הניוזלטר?</label>
+                    <input type="text" value="" name="subscribe" size="10" id="input_field" title="subscribe" />
+                    <input type="submit" name="login" value="Subscribe" alt="login" class="submit_btn"
+                        title="שלח" />
+                    </form>
+                    <div class="cleaner">
+                    </div>
+                </div>
+                <div class="cleaner">
+                </div>
+            </div>
+        </div>
+        <!-- end of templatemo_wrapper -->
+        <div id="templatemo_footer_wrapper">
+            <div id="templatemo_footer">
+                <ul class="footer_menu">
+                    <li><a href="default.aspx">ראשי</a></li>
+                    <li><a href="regist.aspx">בא תצטרף</a></li>
+                    <li><a href="#">חדשות</a></li>
+                    <li><a href="#">על הפרויקט</a></li>
+                    <li class="last_menu"><a href="#">צור קשר</a></li>
+                </ul>
+                Copyright © 2012 <a href="#"></a>|
+                <!-- end of footer -->
+            </div>
+            <!-- end of footer_wrapper -->
+            <div align="center">
+                This template downloaded form <a href='http://all-free-download.com/free-website-templates/'>
+                    free website templates</a></div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CD_DataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CD_DataModelStoreContainer">
+    <EntitySet Name="CD_Countries" EntityType="CD_DataModel.Store.CD_Countries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CD_EntityTypes" EntityType="CD_DataModel.Store.CD_EntityTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CD_Languages" EntityType="CD_DataModel.Store.CD_Languages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CD_Users" EntityType="CD_DataModel.Store.CD_Users" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="CD_Countries">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CD_EntityTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CD_Languages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CD_Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Username" Type="nvarchar" MaxLength="100" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" />
+    <Property Name="Salt" Type="nvarchar" MaxLength="100" />
+    <Property Name="BirthDate" Type="datetime" />
+    <Property Name="BirthDateHeb" Type="nvarchar" MaxLength="100" />
+    <Property Name="EGenderID" Type="int" />
+    <Property Name="LastVisitDate" Type="datetime" />
+    <Property Name="LastVisitIP" Type="nvarchar" MaxLength="20" />
+    <Property Name="TimeStamp" Type="datetime" />
+  </EntityType>
+</Schema>

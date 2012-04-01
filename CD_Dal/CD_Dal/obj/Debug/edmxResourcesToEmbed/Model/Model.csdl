@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CD_Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CD_ModelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CD_AlbumGenreRelation" EntityType="CD_Model.CD_AlbumGenreRelation" />
+    <EntitySet Name="CD_Albums" EntityType="CD_Model.CD_Albums" />
+    <EntitySet Name="CD_Artists" EntityType="CD_Model.CD_Artists" />
+    <EntitySet Name="CD_Countries" EntityType="CD_Model.CD_Countries" />
+    <EntitySet Name="CD_EntityTypes" EntityType="CD_Model.CD_EntityTypes" />
+    <EntitySet Name="CD_Genres" EntityType="CD_Model.CD_Genres" />
+    <EntitySet Name="CD_Items" EntityType="CD_Model.CD_Items" />
+    <EntitySet Name="CD_ItemTypes" EntityType="CD_Model.CD_ItemTypes" />
+    <EntitySet Name="CD_Jobs" EntityType="CD_Model.CD_Jobs" />
+    <EntitySet Name="CD_Languages" EntityType="CD_Model.CD_Languages" />
+    <EntitySet Name="CD_MainRelations" EntityType="CD_Model.CD_MainRelations" />
+    <EntitySet Name="CD_Songs" EntityType="CD_Model.CD_Songs" />
+    <EntitySet Name="CD_SongVersions" EntityType="CD_Model.CD_SongVersions" />
+    <EntitySet Name="CD_Users" EntityType="CD_Model.CD_Users" />
+    <AssociationSet Name="FK_CD_AlbumGenreRelation_CD_Albums" Association="CD_Model.FK_CD_AlbumGenreRelation_CD_Albums">
+      <End Role="CD_Albums" EntitySet="CD_Albums" />
+      <End Role="CD_AlbumGenreRelation" EntitySet="CD_AlbumGenreRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_AlbumGenreRelation_CD_Genres" Association="CD_Model.FK_CD_AlbumGenreRelation_CD_Genres">
+      <End Role="CD_Genres" EntitySet="CD_Genres" />
+      <End Role="CD_AlbumGenreRelation" EntitySet="CD_AlbumGenreRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_Albums_CD_Albums" Association="CD_Model.FK_CD_Albums_CD_Albums">
+      <End Role="CD_Albums" EntitySet="CD_Albums" />
+      <End Role="CD_Albums1" EntitySet="CD_Albums" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_MainRelations_CD_Albums" Association="CD_Model.FK_CD_MainRelations_CD_Albums">
+      <End Role="CD_Albums" EntitySet="CD_Albums" />
+      <End Role="CD_MainRelations" EntitySet="CD_MainRelations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_Items_CD_Artists" Association="CD_Model.FK_CD_Items_CD_Artists">
+      <End Role="CD_Artists" EntitySet="CD_Artists" />
+      <End Role="CD_Items" EntitySet="CD_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_MainRelations_CD_Artists" Association="CD_Model.FK_CD_MainRelations_CD_Artists">
+      <End Role="CD_Artists" EntitySet="CD_Artists" />
+      <End Role="CD_MainRelations" EntitySet="CD_MainRelations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_Items_CD_EntityTypes" Association="CD_Model.FK_CD_Items_CD_EntityTypes">
+      <End Role="CD_EntityTypes" EntitySet="CD_EntityTypes" />
+      <End Role="CD_Items" EntitySet="CD_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_Items_CD_Jobs" Association="CD_Model.FK_CD_Items_CD_Jobs">
+      <End Role="CD_Jobs" EntitySet="CD_Jobs" />
+      <End Role="CD_Items" EntitySet="CD_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_Jobs_CD_Jobs" Association="CD_Model.FK_CD_Jobs_CD_Jobs">
+      <End Role="CD_Jobs" EntitySet="CD_Jobs" />
+      <End Role="CD_Jobs1" EntitySet="CD_Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_MainRelations_CD_Songs" Association="CD_Model.FK_CD_MainRelations_CD_Songs">
+      <End Role="CD_Songs" EntitySet="CD_Songs" />
+      <End Role="CD_MainRelations" EntitySet="CD_MainRelations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CD_MainRelations_CD_SongVersions" Association="CD_Model.FK_CD_MainRelations_CD_SongVersions">
+      <End Role="CD_SongVersions" EntitySet="CD_SongVersions" />
+      <End Role="CD_MainRelations" EntitySet="CD_MainRelations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CD_AlbumGenreRelation">
+    <Key>
+      <PropertyRef Name="AlbumGenreRelationID" />
+    </Key>
+    <Property Type="Int32" Name="AlbumGenreRelationID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Decimal" Name="AlbumID" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="GenreID" />
+    <Property Type="DateTime" Name="TimeStamp" />
+    <NavigationProperty Name="CD_Albums" Relationship="CD_Model.FK_CD_AlbumGenreRelation_CD_Albums" FromRole="CD_AlbumGenreRelation" ToRole="CD_Albums" />
+    <NavigationProperty Name="CD_Genres" Relationship="CD_Model.FK_CD_AlbumGenreRelation_CD_Genres" FromRole="CD_AlbumGenreRelation" ToRole="CD_Genres" />
+  </EntityType>
+  <EntityType Name="CD_Albums">
+    <Key>
+      <PropertyRef Name="AlbumID" />
+    </Key>
+    <Property Type="Decimal" Name="AlbumID" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="AlbumName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="Tracks" />
+    <Property Type="DateTime" Name="Year" />
+    <Property Type="String" Name="YearTxt" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="Type" />
+    <Property Type="DateTime" Name="Timestamps" />
+    <Property Type="DateTime" Name="UpdateDate" />
+    <Property Type="Decimal" Name="Userid" Precision="18" Scale="0" />
+    <Property Type="String" Name="CDDB" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MBID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PublisherID" />
+    <Property Type="Int32" Name="LanguageID" />
+    <Property Type="Int32" Name="CountryID" />
+    <NavigationProperty Name="CD_AlbumGenreRelation" Relationship="CD_Model.FK_CD_AlbumGenreRelation_CD_Albums" FromRole="CD_Albums" ToRole="CD_AlbumGenreRelation" />
+    <NavigationProperty Name="CD_Albums1" Relationship="CD_Model.FK_CD_Albums_CD_Albums" FromRole="CD_Albums" ToRole="CD_Albums1" />
+    <NavigationProperty Name="CD_Albums2" Relationship="CD_Model.FK_CD_Albums_CD_Albums" FromRole="CD_Albums1" ToRole="CD_Albums" />
+    <NavigationProperty Name="CD_MainRelations" Relationship="CD_Model.FK_CD_MainRelations_CD_Albums" FromRole="CD_Albums" ToRole="CD_MainRelations" />
+  </EntityType>
+  <EntityType Name="CD_Artists">
+    <Key>
+      <PropertyRef Name="ArtistID" />
+    </Key>
+    <Property Type="Decimal" Name="ArtistID" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ArtistName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MisSpelling" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Timestamp" />
+    <Property Type="DateTime" Name="UpdateDate" />
+    <Property Type="Decimal" Name="UserId" Precision="18" Scale="0" />
+    <NavigationProperty Name="CD_Items" Relationship="CD_Model.FK_CD_Items_CD_Artists" FromRole="CD_Artists" ToRole="CD_Items" />
+    <NavigationProperty Name="CD_MainRelations" Relationship="CD_Model.FK_CD_MainRelations_CD_Artists" FromRole="CD_Artists" ToRole="CD_MainRelations" />
+  </EntityType>
+  <EntityType Name="CD_Countries">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Type="Int32" Name="CountryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CountryName" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CD_EntityTypes">
+    <Key>
+      <PropertyRef Name="EntityTypeID" />
+    </Key>
+    <Property Type="Int32" Name="EntityTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EntityTypeName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CD_Items" Relationship="CD_Model.FK_CD_Items_CD_EntityTypes" FromRole="CD_EntityTypes" ToRole="CD_Items" />
+  </EntityType>
+  <EntityType Name="CD_Genres">
+    <Key>
+      <PropertyRef Name="GenreID" />
+    </Key>
+    <Property Type="Int32" Name="GenreID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="GenreName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CD_AlbumGenreRelation" Relationship="CD_Model.FK_CD_AlbumGenreRelation_CD_Genres" FromRole="CD_Genres" ToRole="CD_AlbumGenreRelation" />
+  </EntityType>
+  <EntityType Name="CD_Items">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Type="Decimal" Name="ItemID" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ItemType" />
+    <Property Type="String" Name="ItemData" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="EntityTypeID" />
+    <Property Type="Decimal" Name="EntityID" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="EntityType_Related" />
+    <Property Type="Int32" Name="JobID_Related" />
+    <Property Type="Decimal" Name="PersonID_Related" Precision="18" Scale="0" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Decimal" Name="UserID" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="TimeStamp" />
+    <NavigationProperty Name="CD_Artists" Relationship="CD_Model.FK_CD_Items_CD_Artists" FromRole="CD_Items" ToRole="CD_Artists" />
+    <NavigationProperty Name="CD_EntityTypes" Relationship="CD_Model.FK_CD_Items_CD_EntityTypes" FromRole="CD_Items" ToRole="CD_EntityTypes" />
+    <NavigationProperty Name="CD_Jobs" Relationship="CD_Model.FK_CD_Items_CD_Jobs" FromRole="CD_Items" ToRole="CD_Jobs" />
+  </EntityType>
+  <EntityType Name="CD_ItemTypes">
+    <Key>
+      <PropertyRef Name="ItemTypeID" />
+    </Key>
+    <Property Type="Int32" Name="ItemTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ItemTypeName" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CD_Jobs">
+    <Key>
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Type="Int32" Name="JobID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="JobName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CD_Items" Relationship="CD_Model.FK_CD_Items_CD_Jobs" FromRole="CD_Jobs" ToRole="CD_Items" />
+    <NavigationProperty Name="CD_Jobs1" Relationship="CD_Model.FK_CD_Jobs_CD_Jobs" FromRole="CD_Jobs" ToRole="CD_Jobs1" />
+    <NavigationProperty Name="CD_Jobs2" Relationship="CD_Model.FK_CD_Jobs_CD_Jobs" FromRole="CD_Jobs1" ToRole="CD_Jobs" />
+  </EntityType>
+  <EntityType Name="CD_Languages">
+    <Key>
+      <PropertyRef Name="LanguageID" />
+    </Key>
+    <Property Type="Int32" Name="LanguageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Language" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CD_MainRelations">
+    <Key>
+      <PropertyRef Name="RelationID" />
+    </Key>
+    <Property Type="Decimal" Name="RelationID" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Decimal" Name="SongID" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="SongVersionID" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="AlbumID" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="ArtistID" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="OrderNum" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="TimeStamp" />
+    <NavigationProperty Name="CD_Albums" Relationship="CD_Model.FK_CD_MainRelations_CD_Albums" FromRole="CD_MainRelations" ToRole="CD_Albums" />
+    <NavigationProperty Name="CD_Artists" Relationship="CD_Model.FK_CD_MainRelations_CD_Artists" FromRole="CD_MainRelations" ToRole="CD_Artists" />
+    <NavigationProperty Name="CD_Songs" Relationship="CD_Model.FK_CD_MainRelations_CD_Songs" FromRole="CD_MainRelations" ToRole="CD_Songs" />
+    <NavigationProperty Name="CD_SongVersions" Relationship="CD_Model.FK_CD_MainRelations_CD_SongVersions" FromRole="CD_MainRelations" ToRole="CD_SongVersions" />
+  </EntityType>
+  <EntityType Name="CD_Songs">
+    <Key>
+      <PropertyRef Name="SongID" />
+    </Key>
+    <Property Type="Decimal" Name="SongID" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SongName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SongMisspelling" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Lyrics" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeTxt" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Timestamp" />
+    <Property Type="DateTime" Name="LastUpdate" />
+    <Property Type="Decimal" Name="Userid" Precision="18" Scale="0" />
+    <NavigationProperty Name="CD_MainRelations" Relationship="CD_Model.FK_CD_MainRelations_CD_Songs" FromRole="CD_Songs" ToRole="CD_MainRelations" />
+  </EntityType>
+  <EntityType Name="CD_SongVersions">
+    <Key>
+      <PropertyRef Name="SongVersionsID" />
+    </Key>
+    <Property Type="Decimal" Name="SongVersionsID" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Decimal" Name="SongID" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="Length" />
+    <Property Type="DateTime" Name="TimeStamp" />
+    <Property Type="DateTime" Name="UpdateDate" />
+    <Property Type="Decimal" Name="UserID" Precision="18" Scale="0" />
+    <NavigationProperty Name="CD_MainRelations" Relationship="CD_Model.FK_CD_MainRelations_CD_SongVersions" FromRole="CD_SongVersions" ToRole="CD_MainRelations" />
+  </EntityType>
+  <EntityType Name="CD_Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Type="Decimal" Name="UserID" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FirstName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Salt" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="GenderID" />
+    <Property Type="DateTime" Name="BirthDate" />
+    <Property Type="String" Name="BirthDateHeb" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="TimeStamp" />
+    <Property Type="DateTime" Name="LastVisitDate" />
+    <Property Type="String" Name="LastIP" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_CD_AlbumGenreRelation_CD_Albums">
+    <End Type="CD_Model.CD_Albums" Role="CD_Albums" Multiplicity="0..1" />
+    <End Type="CD_Model.CD_AlbumGenreRelation" Role="CD_AlbumGenreRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Albums">
+        <PropertyRef Name="AlbumID" />
+      </Principal>
+      <Dependent Role="CD_AlbumGenreRelation">
+        <PropertyRef Name="AlbumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_AlbumGenreRelation_CD_Genres">
+    <End Type="CD_Model.CD_Genres" Role="CD_Genres" Multiplicity="0..1" />
+    <End Type="CD_Model.CD_AlbumGenreRelation" Role="CD_AlbumGenreRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Genres">
+        <PropertyRef Name="GenreID" />
+      </Principal>
+      <Dependent Role="CD_AlbumGenreRelation">
+        <PropertyRef Name="GenreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_Albums_CD_Albums">
+    <End Type="CD_Model.CD_Albums" Role="CD_Albums" Multiplicity="1" />
+    <End Type="CD_Model.CD_Albums" Role="CD_Albums1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Albums">
+        <PropertyRef Name="AlbumID" />
+      </Principal>
+      <Dependent Role="CD_Albums1">
+        <PropertyRef Name="AlbumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_MainRelations_CD_Albums">
+    <End Type="CD_Model.CD_Albums" Role="CD_Albums" Multiplicity="0..1" />
+    <End Type="CD_Model.CD_MainRelations" Role="CD_MainRelations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Albums">
+        <PropertyRef Name="AlbumID" />
+      </Principal>
+      <Dependent Role="CD_MainRelations">
+        <PropertyRef Name="AlbumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_Items_CD_Artists">
+    <End Type="CD_Model.CD_Artists" Role="CD_Artists" Multiplicity="0..1" />
+    <End Type="CD_Model.CD_Items" Role="CD_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Artists">
+        <PropertyRef Name="ArtistID" />
+      </Principal>
+      <Dependent Role="CD_Items">
+        <PropertyRef Name="PersonID_Related" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_MainRelations_CD_Artists">
+    <End Type="CD_Model.CD_Artists" Role="CD_Artists" Multiplicity="0..1" />
+    <End Type="CD_Model.CD_MainRelations" Role="CD_MainRelations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Artists">
+        <PropertyRef Name="ArtistID" />
+      </Principal>
+      <Dependent Role="CD_MainRelations">
+        <PropertyRef Name="ArtistID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_Items_CD_EntityTypes">
+    <End Type="CD_Model.CD_EntityTypes" Role="CD_EntityTypes" Multiplicity="0..1" />
+    <End Type="CD_Model.CD_Items" Role="CD_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_EntityTypes">
+        <PropertyRef Name="EntityTypeID" />
+      </Principal>
+      <Dependent Role="CD_Items">
+        <PropertyRef Name="EntityTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_Items_CD_Jobs">
+    <End Type="CD_Model.CD_Jobs" Role="CD_Jobs" Multiplicity="0..1" />
+    <End Type="CD_Model.CD_Items" Role="CD_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Jobs">
+        <PropertyRef Name="JobID" />
+      </Principal>
+      <Dependent Role="CD_Items">
+        <PropertyRef Name="JobID_Related" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_Jobs_CD_Jobs">
+    <End Type="CD_Model.CD_Jobs" Role="CD_Jobs" Multiplicity="1" />
+    <End Type="CD_Model.CD_Jobs" Role="CD_Jobs1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Jobs">
+        <PropertyRef Name="JobID" />
+      </Principal>
+      <Dependent Role="CD_Jobs1">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_MainRelations_CD_Songs">
+    <End Type="CD_Model.CD_Songs" Role="CD_Songs" Multiplicity="0..1" />
+    <End Type="CD_Model.CD_MainRelations" Role="CD_MainRelations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_Songs">
+        <PropertyRef Name="SongID" />
+      </Principal>
+      <Dependent Role="CD_MainRelations">
+        <PropertyRef Name="SongID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CD_MainRelations_CD_SongVersions">
+    <End Type="CD_Model.CD_SongVersions" Role="CD_SongVersions" Multiplicity="0..1" />
+    <End Type="CD_Model.CD_MainRelations" Role="CD_MainRelations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CD_SongVersions">
+        <PropertyRef Name="SongVersionsID" />
+      </Principal>
+      <Dependent Role="CD_MainRelations">
+        <PropertyRef Name="SongVersionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

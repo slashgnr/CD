@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CD_ModelStoreContainer" CdmEntityContainer="CD_ModelEntities">
+    <EntitySetMapping Name="CD_AlbumGenreRelation">
+      <EntityTypeMapping TypeName="CD_Model.CD_AlbumGenreRelation">
+        <MappingFragment StoreEntitySet="CD_AlbumGenreRelation">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+          <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+          <ScalarProperty Name="AlbumGenreRelationID" ColumnName="AlbumGenreRelationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Albums">
+      <EntityTypeMapping TypeName="CD_Model.CD_Albums">
+        <MappingFragment StoreEntitySet="CD_Albums">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+          <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+          <ScalarProperty Name="MBID" ColumnName="MBID" />
+          <ScalarProperty Name="CDDB" ColumnName="CDDB" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Timestamps" ColumnName="Timestamps" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="YearTxt" ColumnName="YearTxt" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Tracks" ColumnName="Tracks" />
+          <ScalarProperty Name="AlbumName" ColumnName="AlbumName" />
+          <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Artists">
+      <EntityTypeMapping TypeName="CD_Model.CD_Artists">
+        <MappingFragment StoreEntitySet="CD_Artists">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="MisSpelling" ColumnName="MisSpelling" />
+          <ScalarProperty Name="ArtistName" ColumnName="ArtistName" />
+          <ScalarProperty Name="ArtistID" ColumnName="ArtistID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Countries">
+      <EntityTypeMapping TypeName="CD_Model.CD_Countries">
+        <MappingFragment StoreEntitySet="CD_Countries">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_EntityTypes">
+      <EntityTypeMapping TypeName="CD_Model.CD_EntityTypes">
+        <MappingFragment StoreEntitySet="CD_EntityTypes">
+          <ScalarProperty Name="EntityTypeName" ColumnName="EntityTypeName" />
+          <ScalarProperty Name="EntityTypeID" ColumnName="EntityTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Genres">
+      <EntityTypeMapping TypeName="CD_Model.CD_Genres">
+        <MappingFragment StoreEntitySet="CD_Genres">
+          <ScalarProperty Name="GenreName" ColumnName="GenreName" />
+          <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Items">
+      <EntityTypeMapping TypeName="CD_Model.CD_Items">
+        <MappingFragment StoreEntitySet="CD_Items">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="PersonID_Related" ColumnName="PersonID_Related" />
+          <ScalarProperty Name="JobID_Related" ColumnName="JobID_Related" />
+          <ScalarProperty Name="EntityType_Related" ColumnName="EntityType_Related" />
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="EntityTypeID" ColumnName="EntityTypeID" />
+          <ScalarProperty Name="ItemData" ColumnName="ItemData" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_ItemTypes">
+      <EntityTypeMapping TypeName="CD_Model.CD_ItemTypes">
+        <MappingFragment StoreEntitySet="CD_ItemTypes">
+          <ScalarProperty Name="ItemTypeName" ColumnName="ItemTypeName" />
+          <ScalarProperty Name="ItemTypeID" ColumnName="ItemTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Jobs">
+      <EntityTypeMapping TypeName="CD_Model.CD_Jobs">
+        <MappingFragment StoreEntitySet="CD_Jobs">
+          <ScalarProperty Name="JobName" ColumnName="JobName" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Languages">
+      <EntityTypeMapping TypeName="CD_Model.CD_Languages">
+        <MappingFragment StoreEntitySet="CD_Languages">
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_MainRelations">
+      <EntityTypeMapping TypeName="CD_Model.CD_MainRelations">
+        <MappingFragment StoreEntitySet="CD_MainRelations">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="ArtistID" ColumnName="ArtistID" />
+          <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+          <ScalarProperty Name="SongVersionID" ColumnName="SongVersionID" />
+          <ScalarProperty Name="SongID" ColumnName="SongID" />
+          <ScalarProperty Name="RelationID" ColumnName="RelationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Songs">
+      <EntityTypeMapping TypeName="CD_Model.CD_Songs">
+        <MappingFragment StoreEntitySet="CD_Songs">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="FreeTxt" ColumnName="FreeTxt" />
+          <ScalarProperty Name="Lyrics" ColumnName="Lyrics" />
+          <ScalarProperty Name="SongMisspelling" ColumnName="SongMisspelling" />
+          <ScalarProperty Name="SongName" ColumnName="SongName" />
+          <ScalarProperty Name="SongID" ColumnName="SongID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_SongVersions">
+      <EntityTypeMapping TypeName="CD_Model.CD_SongVersions">
+        <MappingFragment StoreEntitySet="CD_SongVersions">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="SongID" ColumnName="SongID" />
+          <ScalarProperty Name="SongVersionsID" ColumnName="SongVersionsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CD_Users">
+      <EntityTypeMapping TypeName="CD_Model.CD_Users">
+        <MappingFragment StoreEntitySet="CD_Users">
+          <ScalarProperty Name="LastIP" ColumnName="LastIP" />
+          <ScalarProperty Name="LastVisitDate" ColumnName="LastVisitDate" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="BirthDateHeb" ColumnName="BirthDateHeb" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
